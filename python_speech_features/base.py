@@ -55,7 +55,7 @@ def mfcc(signal, samplerate=16000, winlen=0.025, winstep=0.01, numcep=13,
 
 
 def fbank(signal, samplerate=16000, winlen=0.025, winstep=0.01,
-          nfilt=40, nfft=512, lowfreq=0, highfreq=None, preemph=0.97,
+          nfilt=40, nfft=None, lowfreq=0, highfreq=None, preemph=0.97,
           winfunc=numpy.hamming):
     """Compute Mel-filterbank energy features from an audio signal.
 
@@ -74,6 +74,7 @@ def fbank(signal, samplerate=16000, winlen=0.025, winstep=0.01,
                 Each row holds 1 feature vector. The
         second return value is the energy in each frame (total energy, unwindowed)
     """
+    nfft = nfft or calculate_nfft(samplerate, winlen)
     highfreq = highfreq or samplerate / 2
     signal = sigproc.preemphasis(signal, preemph)
     frames = sigproc.framesig(signal, winlen * samplerate, winstep * samplerate, winfunc)
@@ -88,7 +89,7 @@ def fbank(signal, samplerate=16000, winlen=0.025, winstep=0.01,
 
 
 def logfbank(signal, samplerate=16000, winlen=0.025, winstep=0.01,
-             nfilt=40, nfft=512, lowfreq=0, highfreq=None, preemph=0.97,
+             nfilt=40, nfft=None, lowfreq=0, highfreq=None, preemph=0.97,
              winfunc=numpy.hamming):
     """Compute log Mel-filterbank energy features from an audio signal.
 

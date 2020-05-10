@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>140</y>
+      <y>290</y>
       <width>691</width>
-      <height>431</height>
+      <height>291</height>
      </rect>
     </property>
     <property name="font">
@@ -35,7 +35,7 @@
      <bool>false</bool>
     </property>
     <property name="title">
-     <string>Train HMM</string>
+     <string>Train HMM-GMM</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -46,29 +46,11 @@
     <property name="checkable">
      <bool>false</bool>
     </property>
-    <widget class="QPushButton" name="record_bt">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>80</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Record </string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="train_bt">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>330</y>
+       <x>540</x>
+       <y>200</y>
        <width>93</width>
        <height>28</height>
       </rect>
@@ -86,7 +68,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>210</y>
+       <y>40</y>
        <width>93</width>
        <height>28</height>
       </rect>
@@ -100,28 +82,11 @@
       <string>Select Folder</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="record_nm">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>80</y>
-       <width>491</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="select_folder_nm">
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>210</y>
+       <y>40</y>
        <width>491</width>
        <height>41</height>
       </rect>
@@ -134,11 +99,119 @@
       </font>
      </property>
     </widget>
-    <widget class="QPushButton" name="play_bt">
+    <widget class="QGroupBox" name="groupBox_5">
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>130</y>
+       <y>100</y>
+       <width>151</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>MFCC Option</string>
+     </property>
+     <widget class="QRadioButton" name="feat39">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>131</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>39 Feature</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="feat13">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>13 Feature</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_6">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>100</y>
+       <width>151</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>GMM Option</string>
+     </property>
+     <widget class="QRadioButton" name="mix6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>6 mixture</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="mix3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>3 mixture</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="del_bt">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>200</y>
        <width>93</width>
        <height>28</height>
       </rect>
@@ -149,7 +222,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Play</string>
+      <string>Delete</string>
      </property>
     </widget>
    </widget>
@@ -157,9 +230,9 @@
     <property name="geometry">
      <rect>
       <x>860</x>
-      <y>140</y>
+      <y>130</y>
       <width>451</width>
-      <height>431</height>
+      <height>451</height>
      </rect>
     </property>
     <property name="font">
@@ -179,7 +252,7 @@
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>90</y>
+       <y>80</y>
        <width>93</width>
        <height>28</height>
       </rect>
@@ -190,38 +263,14 @@
       </font>
      </property>
      <property name="text">
-      <string>speech</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="result">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>250</y>
-       <width>411</width>
-       <height>101</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>30</pointsize>
-      </font>
-     </property>
-     <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="text">
-      <string>unknow</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <string>Speech</string>
      </property>
     </widget>
     <widget class="QLabel" name="resultLabel">
      <property name="geometry">
       <rect>
        <x>100</x>
-       <y>180</y>
+       <y>160</y>
        <width>281</width>
        <height>31</height>
       </rect>
@@ -235,11 +284,48 @@
       <string>The Sound Recognize As Word :</string>
      </property>
     </widget>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>220</y>
+       <width>411</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QLabel" name="result">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>40</y>
+        <width>411</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="text">
+       <string>unknow</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>430</x>
       <y>20</y>
       <width>531</width>
       <height>31</height>
@@ -253,11 +339,97 @@
      </font>
     </property>
     <property name="text">
-     <string>Speech to Text using MFCC and HMM</string>
+     <string>Speech to Text using MFCC and HMM-GMM</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignHCenter|Qt::AlignTop</set>
     </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>130</y>
+      <width>691</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Record Sound</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <widget class="QPushButton" name="record_bt">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Record </string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="record_nm">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>40</y>
+       <width>491</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="play_bt">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>90</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Play</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
