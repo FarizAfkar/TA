@@ -245,4 +245,4 @@ data_record/
 model/
 *.pyc
 guiqtfinal.ui
-**/__pycache__/
+python_speech_features/__pycache__/
