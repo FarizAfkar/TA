@@ -243,3 +243,6 @@ fabric.properties
 data_stt/
 data_record/
 model/
+*.pyc
+guiqtfinal.ui
+**/__pycache__/

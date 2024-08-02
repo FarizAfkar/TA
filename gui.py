@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QMainWindow, QMessageBox, QFileDialog
-from python_speech_features import mfcc, delta
+from python_speech_features.base import mfcc, delta
 from hmmlearn import hmm
 # import matplotlib.pyplot as plt
 import pickle
@@ -285,7 +285,7 @@ class MyWindow(QMainWindow):
                                        QMessageBox.Yes | QMessageBox.No)
             if msg == QMessageBox.Yes:
                 print('yes')
-                os.remove('C:/Users/MFTA/PycharmProjects/TA/model/hmm_gmm_model.pickle')
+                os.remove('D:/WORK/PROJECT/Software/PycharmProjects/TA/model/hmm_gmm_model.pickle')
             if msg == QMessageBox.No:
                 print('no')
         except Exception as e:
@@ -303,7 +303,7 @@ class MyWindow(QMainWindow):
             myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=1)
             sd.wait(1)  # wait until recording duration finish
             wav.write("data_stt/stt.wav", fs, myrecording)  # save as wav file
-            input_files = 'C:/Users/MFTA/PycharmProjects/TA/data_stt/stt.wav'
+            input_files = 'D:/WORK/PROJECT/Software/PycharmProjects/TA/data_stt/stt.wav'
 
             with open('./model/hmm_gmm_model.pickle', 'rb') as pick:
                 hmm_models = pickle.load(pick)
