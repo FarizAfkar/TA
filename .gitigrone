@@ -241,8 +241,9 @@ fabric.properties
 
 .tmp.driveupload/
 data_stt/
+./stt.wav
 data_record/
 model/
 *.pyc
 guiqtfinal.ui
-python_speech_features/
+pyhton_speech_features/__pycache__/*.pyc
